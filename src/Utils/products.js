@@ -5,7 +5,7 @@ export const products = [
         category: "Juego",
         genre : "Aventura/Historia",
         price : "59.99",
-        image : "../assets/Ac-Valhalla.jpg"
+        image : "./assets/Ac-Valhalla.jpg"
     },
     
     {
