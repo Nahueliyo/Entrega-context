@@ -1,7 +1,10 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar"
-import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import  ItemListContainer  from "./Components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./Components/ItemDetailContainer";
 import MiComponente from "./MiComponente";
+import { ChakraProvider } from '@chakra-ui/react';
+
 
 const App = () =>{
   const dash = "Lo mejor del gaming a tu alcance";
@@ -11,9 +14,12 @@ const App = () =>{
 
    return (
     <>
-      <Navbar />
+    <Navbar />
+    <ChakraProvider>
       <ItemListContainer greeting={dash}/>
-      <MiComponente stock={5} onAdd={onAdd}/>
+      {/* <MiComponente stock={5} onAdd={onAdd}/> */}
+      <ItemDetailContainer/>
+    </ChakraProvider>
     </>
    ) 
 }
