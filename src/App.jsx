@@ -4,6 +4,8 @@ import  ItemListContainer  from "./Components/ItemListContainer/ItemListContaine
 import { ItemDetailContainer } from "./Components/ItemDetailContainer";
 import MiComponente from "./MiComponente";
 import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter, Routes, Route} from "react-router-dom"
+
 
 
 const App = () =>{
@@ -14,8 +16,15 @@ const App = () =>{
 
    return (
     <>
-    <Navbar />
     <ChakraProvider>
+      <BrowserRouter>
+    <Navbar />
+    <Routes>
+      <Route path = "/" element={<ItemListContainer greeting="Bienvenidxs" />}/>
+      <Route path="/category/:genre" element={<ItemListContainer greeting="Bienvenidxs" />}/>
+      <Route path="product/:id" element={<ItemDetailContainer/>}/>
+    </Routes>
+    </BrowserRouter>
       <ItemListContainer greeting={dash}/>
       {/* <MiComponente stock={5} onAdd={onAdd}/> */}
       <ItemDetailContainer/>
