@@ -23,7 +23,6 @@ const ItemListContainer = ({greeting}) => {
           setLoading(false)
           setListProduct(res.filer(prod => prod.genre === genre))
         } else{
-
         setLoading(false)
         setListProduct(res)
         }

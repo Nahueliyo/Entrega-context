@@ -7,13 +7,12 @@ const Item = ({product}) => {
             <Text>{product.name}</Text>
             <Text>${product.price}</Text>
             <Button colorScheme='purple' size='m'>
-                <NavLink to={"product/${genre.id}"}>
+                <NavLink to={`product/${product.id}`}>
                     <Link>Ver Producto</Link>
-                <NavLink/>
-                
+                </NavLink>
             </Button>
             </VStack>
         )
-}
+        }
 
 export { Item } 
