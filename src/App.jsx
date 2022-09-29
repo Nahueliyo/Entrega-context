@@ -5,6 +5,7 @@ import { ItemDetailContainer } from "./Components/ItemDetailContainer";
 import MiComponente from "./MiComponente";
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route} from "react-router-dom"
+import { Cart } from "./Components/Cart";
 
 
 
@@ -23,10 +24,11 @@ const App = () =>{
       <Route path = "/" element={<ItemListContainer greeting="Bienvenidxs" />}/>
       <Route path="/category/:genre" element={<ItemListContainer greeting="Bienvenidxs" />}/>
       <Route path="product/:id" element={<ItemDetailContainer/>}/>
+      <Route path="/Cart" element={<Cart />} />
     </Routes>
     </BrowserRouter>
       <ItemListContainer greeting={dash}/>
-      {/* <MiComponente stock={5} onAdd={onAdd}/> */}
+      { <MiComponente stock={5} onAdd={onAdd}/>}
       <ItemDetailContainer/>
     </ChakraProvider>
     </>
