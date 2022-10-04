@@ -27,9 +27,9 @@ const App = () =>{
       <Route path="/Cart" element={<Cart />} />
     </Routes>
     </BrowserRouter>
-      <ItemListContainer greeting={dash}/>
+      {/* <ItemListContainer greeting={dash}/>
       { <MiComponente stock={5} onAdd={onAdd}/>}
-      <ItemDetailContainer/>
+      <ItemDetailContainer/> */}
     </ChakraProvider>
     </>
    ) 
