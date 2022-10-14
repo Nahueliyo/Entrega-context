@@ -6,6 +6,7 @@ import MiComponente from "./MiComponente";
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route} from "react-router-dom"
 import { Cart } from "./Components/Cart";
+import { CartContextProvider } from "../Context/CartContext";
 
 
 
@@ -19,6 +20,9 @@ const App = () =>{
     <>
     <ChakraProvider>
       <BrowserRouter>
+    <CartContextProvider>
+      
+    </CartContextProvider>
     <Navbar />
     <Routes>
       <Route path = "/" element={<ItemListContainer greeting="Bienvenidxs" />}/>
@@ -27,9 +31,6 @@ const App = () =>{
       <Route path="/Cart" element={<Cart />} />
     </Routes>
     </BrowserRouter>
-      {/* <ItemListContainer greeting={dash}/>
-      { <MiComponente stock={5} onAdd={onAdd}/>}
-      <ItemDetailContainer/> */}
     </ChakraProvider>
     </>
    ) 

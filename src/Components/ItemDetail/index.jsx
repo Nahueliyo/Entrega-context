@@ -3,6 +3,7 @@ import { useState } from "react"
 import { FaCreditCard, FaRegCreditCard, FaHeart} from "react-icons/fa"
 import { NavLink } from "react-router-dom"
 import { ItemCount } from "../ItemCount"
+import { useCartContext } from "../../Context/CartContext"
 
 
 const ItemDetail = ( listProduct ) => {
@@ -12,7 +13,10 @@ const ItemDetail = ( listProduct ) => {
 
     const [isAdded, setListAdded] = useState (false)
 
-    const onAdd = () =>{
+    const { addToCart, cartList } = useCartContext()
+
+    const onAdd = (quantity) =>{
+        addToCart(listProduct, quantity)
         setIsAdded(true)
     }
 
